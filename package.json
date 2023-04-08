@@ -6,7 +6,7 @@
   "scripts": {
     "build": "tsc"
   },
-  "author": "",
+  "author": "Riadh Chougui",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.0.3"

@@ -1,7 +1,7 @@
 ## NotReact
 [DEMO](https://riadhdev-notreact.netlify.app/)
 
-Simplified implementation of React hooks in typescript based on the great talk by Shawn "Swyx" Wang [Link to youtube video](https://www.youtube.com/watch?v=KJP1E-Y-xyo)
+A zero dependency simplified implementation of React hooks in typescript based on the great talk by Shawn "Swyx" Wang [Link to youtube video](https://www.youtube.com/watch?v=KJP1E-Y-xyo)
 
 ## Checklist
 
