@@ -10,7 +10,18 @@ export const React = (() => {
     hookIndex++;
     return [state, setState] as [T, (v: T) => void];
   };
-
+  const useEffect = (callback: any, dependencyArray?: any) => {
+    const oldDependency = hooks[hookIndex];
+    let hasChanged = true;
+    if (oldDependency) {
+      hasChanged = oldDependency.some(
+        (val: any, i: number) => !Object.is(val, dependencyArray[i])
+      );
+    }
+    if (hasChanged) callback();
+    hooks[hookIndex] = dependencyArray;
+    hookIndex++;
+  };
   const render = (component: any) => {
     hookIndex = 0;
     const Component = component();
@@ -19,6 +30,7 @@ export const React = (() => {
   };
   return {
     useState,
+    useEffect,
     render,
   };
 })();

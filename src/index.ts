@@ -2,6 +2,9 @@ import { React } from "./notReact";
 const Component = () => {
   const [count, setCount] = React.useState(1);
   const [text, setText] = React.useState<string>("This is not React !");
+  React.useEffect(() => {
+    console.log("useEffect in effect !");
+  }, [text]);
   return {
     render: () => console.log({ count, text }),
     click: () => setCount(count + 1),
